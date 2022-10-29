@@ -23,11 +23,8 @@ int MaxDigit(int num)
     return firstDigit > secondDigit ? firstDigit : secondDigit; // firstDigit больше secondDigit ? да - возвращает firstDigit, нет - возвращает secondDigit
 }
 
-bool IsEqualDigit(int num1, int num2)
-{
-    return num1 == num2;
-}
 
 int maxDigit = MaxDigit(n);
+string result = maxDigit != -1 ? maxDigit.ToString() : "Цифры одинаковые"; // .ToString() чтоб не было ошибки, для вывода результата в данном случае это не важно
 
-Console.WriteLine($"Наибольшая цифра числа {n} => {maxDigit}");
+Console.WriteLine($"Наибольшая цифра числа {n} => {result}");
